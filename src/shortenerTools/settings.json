@@ -1,10 +1,10 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=shortenertoolsw6ngistg;AccountKey=N6o3J6JnDzydClwdAgkQEWVErxFQalXXt0DcVHHIVAjJbwknq1iPXTgOpeqqMp2KsIN2spiEyn49oLBdk44xrQ==;EndpointSuffix=core.windows.net",
+    "AzureWebJobsStorage": "",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
     "FUNCTIONS_V2_COMPATIBILITY_MODE": "true",
-    "UlsDataStorage": "DefaultEndpointsProtocol=https;AccountName=urldataw6ngistg;AccountKey=ZVhCN/5ir6bvX6gbKnwXfcn4s3yKmYoF8nCrfUBcrayLJaEmMkYopb+e2EXjZ9zepfIfuYgFz1g52lO/7heJxw==;EndpointSuffix=core.windows.net",
+    "UlsDataStorage": "",
     "defaultRedirectUrl": "https://azure.com",
     "customDomain": "https://shortenertoolsw6ngi.azurewebsites.net"
   }
