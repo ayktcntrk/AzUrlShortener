@@ -15,6 +15,7 @@ else
             @onclick="CreateShortUrl">
         Add New Url
     </button>
+    <br />
     <table class="table">
         <thead>
             <tr>
@@ -45,13 +46,6 @@ else
             }
         </tbody>
     </table>
-    <p>
-        <!-- Add a new ShortUrl -->
-        <button class="btn btn-primary"
-                @onclick="CreateShortUrl">
-            Add New Url
-        </button>
-    </p>
 }
 
 @if (ShowCreatePopup)
