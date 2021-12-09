@@ -48,7 +48,6 @@ namespace Cloud5mins.Function
         ClaimsPrincipal principal)
         {
             log.LogInformation($"C# HTTP trigger function processed this request: {req}");
-            string userId = string.Empty;
             ShortRequest input;
             var result = new ShortResponse();
 
@@ -60,11 +59,11 @@ namespace Cloud5mins.Function
                 {
                     return invalidRequest;
                 }
-                else
-                {
-                    userId = principal.FindFirst(ClaimTypes.GivenName).Value;
-                    log.LogInformation("Authenticated user {user}.", userId);
-                }
+                //else
+                //{
+                //    var userId = principal.FindFirst(ClaimTypes.GivenName).Value;
+                //    log.LogInformation("Authenticated user {user}.", userId);
+                //}
 
                 // Validation of the inputs
                 if (req == null)

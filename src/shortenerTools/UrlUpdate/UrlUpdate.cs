@@ -56,7 +56,6 @@ namespace Cloud5mins.Function
         {
             log.LogInformation($"C# HTTP trigger function processed this request: {req}");
 
-            string userId = string.Empty;
             ShortUrlEntity input;
             ShortUrlEntity result;
 
@@ -68,11 +67,11 @@ namespace Cloud5mins.Function
                 {
                     return invalidRequest;
                 }
-                else
-                {
-                    userId = principal.FindFirst(ClaimTypes.GivenName).Value;
-                    log.LogInformation("Authenticated user {user}.", userId);
-                }
+                //else
+                //{
+                //    var userId = principal.FindFirst(ClaimTypes.GivenName).Value;
+                //    log.LogInformation("Authenticated user {user}.", userId);
+                //}
 
                 // Validation of the inputs
                 if (req == null)
@@ -115,7 +114,7 @@ namespace Cloud5mins.Function
                 StorageTableHelper stgHelper = new StorageTableHelper(config["UlsDataStorage"]);
 
                 result = await stgHelper.UpdateShortUrlEntity(input);
-                var host = string.IsNullOrEmpty(config["customDomain"]) ? req.Host.Host: config["customDomain"].ToString();
+                var host = string.IsNullOrEmpty(config["customDomain"]) ? req.Host.Host : config["customDomain"].ToString();
                 result.ShortUrl = Utility.GetShortUrl(host, result.RowKey);
 
             }
